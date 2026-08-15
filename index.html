@@ -719,7 +719,7 @@ html,body{overflow-x:clip}
 html.skip-intro{--iD:.05s}
 html.skip-intro .intro{display:none}
 .intro{position:fixed;inset:0;z-index:300;background:linear-gradient(135deg,#081120,#0d1d3d 60%,#102448);display:flex;align-items:center;justify-content:center;animation:introOut .7s 1.7s cubic-bezier(.8,0,.2,1) both;pointer-events:none;overflow:hidden}
-@keyframes introOut{to{transform:translateY(-101%)}}
+@keyframes introOut{to{clip-path:polygon(0 0,100% 0,100% 0,0 12%);transform:translateY(-4%)}}
 .intro::before{content:"";position:absolute;top:-30%;height:160%;width:14%;left:-20%;transform:skewX(-16deg);background:linear-gradient(180deg,rgba(255,122,28,.22),rgba(255,122,28,.02));animation:iBand 1.7s .1s cubic-bezier(.6,.05,.3,1) both}
 @keyframes iBand{to{left:112%}}
 .intro::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 52%,rgba(110,168,255,.16),transparent 55%);animation:iGlow 1.7s ease-out both}
@@ -766,11 +766,20 @@ html.skip-intro .intro{display:none}
 .month-row .mw{font-family:var(--sans);font-size:13.5px;letter-spacing:.08em;font-weight:700}
 .core small{display:none}
 @media(max-width:980px){.node{font-size:11.5px}}
+
+/* イントロ増強: 逆走する青帯＋退場フラッシュ */
+.intro-band2{position:absolute;top:-30%;height:160%;width:10%;left:112%;transform:skewX(-16deg);background:linear-gradient(180deg,rgba(110,168,255,.16),rgba(110,168,255,.01));animation:iBand2 1.7s .25s cubic-bezier(.6,.05,.3,1) both}
+@keyframes iBand2{to{left:-22%}}
+.intro-flash{position:absolute;inset:0;background:radial-gradient(circle at 50% 55%,rgba(255,160,90,.5),rgba(255,122,28,.18) 35%,transparent 65%);opacity:0;animation:iFlash .55s 1.5s cubic-bezier(.3,0,.7,1) both}
+@keyframes iFlash{0%{opacity:0}45%{opacity:1}100%{opacity:0}}
+.intro-inner img{filter:drop-shadow(0 0 22px rgba(110,168,255,.6))}
+@media(prefers-reduced-motion:reduce){.intro-band2,.intro-flash{animation:none;opacity:0}}
 </style>
 <script>try{if(sessionStorage.getItem('esfIntro')){document.documentElement.classList.add('skip-intro')}else{sessionStorage.setItem('esfIntro','1')}}catch(e){}</script>
 </head>
 <body>
 <div class="intro" aria-hidden="true">
+  <span class="intro-band2"></span><span class="intro-flash"></span>
   <div class="intro-inner">
     <img src="assets/mark_white.png" alt="">
     <span class="intro-nm"><i>E</i><i>s</i><i>f</i><i>o</i><i>r</i><i>c</i><i>o</i></span>
