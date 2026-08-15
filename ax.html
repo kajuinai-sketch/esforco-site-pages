@@ -576,6 +576,24 @@ html,body{overflow-x:clip}
 .s-no{line-height:1}
 .node span{line-height:1.55}
 @media(max-width:980px){body{word-break:normal}}
+
+/* ═══ 可読性 第7次: 極小フォント・EN装飾の掃討（2026-08-15） ═══ */
+.logo small{font-size:10.5px;color:#55627a}
+.side-cta small{font-size:11px}
+.scard .tag{font-size:11px;letter-spacing:.12em}
+.node{font-size:12.5px}
+.wbody .cat{font-size:13.5px;color:#a9b7cb;letter-spacing:.1em}
+.wtags span{font-size:13px}
+.works-note{font-size:13px;color:#9fb0c8}
+.form-note{font-size:13px;color:#9fb0c8}
+.lp-thumb span{font-size:10.5px}
+.hv-note{font-size:12px;color:#9fb0c8}
+.hv-chip small{font-size:12px}
+.hv-white .hvh i{display:none}
+.flow-step .fnum,.proc-step .pnum{font-size:12.5px}
+.month-row .mw{font-family:var(--sans);font-size:13.5px;letter-spacing:.08em;font-weight:700}
+.core small{display:none}
+@media(max-width:980px){.node{font-size:11.5px}}
 </style>
 </head>
 <body>
@@ -625,7 +643,7 @@ html,body{overflow-x:clip}
   <div class="hv" aria-hidden="true">
     <span class="hv-note">※ レポートはイメージです</span>
     <div class="hv-card hv-white">
-      <div class="hvh"><b>月次効果レポート</b><i>MONTHLY</i></div>
+      <div class="hvh"><b>月次効果レポート</b></div>
       <div class="hv-row"><span>今月の削減時間</span><b class="up">14.0<i>時間</i></b></div>
       <div class="hv-row"><span>金額換算</span><b>¥35,000</b></div>
       <div class="hv-row"><span>稼働中の自動化</span><b>4<i>件</i></b></div>
@@ -654,9 +672,9 @@ html,body{overflow-x:clip}
     <div class="steps reveal" style="--cols:4"><div class="step"><div class="s-head"><span class="s-no">1</span><span class="s-line"></span></div><h4>無料業務診断</h4><p>訪問し、事務業務の時間をその場で実測。「どこが何時間か」を数字にします。</p></div><div class="step"><div class="s-head"><span class="s-no">2</span><span class="s-line"></span></div><h4>社員向けAI研修</h4><p>業務の棚卸しを組み込んだ実践型研修。</p><em>国の助成金で実質負担1/4（2026年度まで）</em></div><div class="step"><div class="s-head"><span class="s-no">3</span><span class="s-line"></span></div><h4>AI実装（月額）</h4><p>事務業務をAIごとお引き受けし、構築から運用・効果報告まで代行します。</p></div><div class="step"><div class="s-head"><span class="s-no">4</span><span class="s-line"></span></div><h4>システム開発</h4><p>大規模な開発が必要になれば、生成AIを活用しスピーディに構築します。</p></div></div>
 
     <div class="month-card reveal">
-      <div class="month-row"><span class="mw">WEEK 1</span><h5>打ち合わせ 30分</h5><p>お預けいただく業務を決めます。御社は選ぶだけです。</p></div>
-      <div class="month-row"><span class="mw">WEEK 2-3</span><h5>弊社が実装</h5><p>御社の環境の中で構築します。社員の方が操作を覚える必要はありません。</p></div>
-      <div class="month-row"><span class="mw">WEEK 4</span><h5>稼働開始・報告</h5><p>「今月何時間減ったか」を1枚のレポートでご報告します。</p></div>
+      <div class="month-row"><span class="mw">第1週</span><h5>打ち合わせ 30分</h5><p>お預けいただく業務を決めます。御社は選ぶだけです。</p></div>
+      <div class="month-row"><span class="mw">第2〜3週</span><h5>弊社が実装</h5><p>御社の環境の中で構築します。社員の方が操作を覚える必要はありません。</p></div>
+      <div class="month-row"><span class="mw">第4週</span><h5>稼働開始・報告</h5><p>「今月何時間減ったか」を1枚のレポートでご報告します。</p></div>
       <p class="month-close">お預かりする業務を、毎月広げていく。<b>人を増やさずに、事務が回る会社へ。</b></p>
     </div>
   </div>
