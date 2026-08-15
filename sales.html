@@ -489,6 +489,34 @@ body{word-break:auto-phrase}
   .foot-cols a{padding:9px 0 9px 14px;font-size:14px}
   .foot-btm{padding:18px 0 96px;flex-direction:column;align-items:flex-start;gap:6px}
 }
+
+/* ═══ モバイル・ハンバーガーメニュー（2026-08-15） ═══ */
+.menu-btn{display:none}
+@media(max-width:980px){
+  .menu-btn{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:5px;width:44px;height:44px;background:none;border:none;cursor:pointer;margin-left:4px;flex:none}
+  .menu-btn span{display:block;width:22px;height:2px;background:#0c1b33;border-radius:2px;transition:.3s}
+  body.menu-open .menu-btn span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  body.menu-open .menu-btn span:nth-child(2){opacity:0}
+  body.menu-open .menu-btn span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .drawer{position:fixed;inset:0;z-index:99;background:rgba(7,16,31,.97);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+  body.menu-open .drawer{opacity:1;pointer-events:auto}
+  body.menu-open{overflow:hidden}
+  .drawer-nav{display:flex;flex-direction:column;width:78%;max-width:340px;text-align:center}
+  .drawer-nav a{color:#eef2f8;font-size:17.5px;font-weight:700;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);letter-spacing:.04em}
+  .drawer-nav a.drawer-cta{background:linear-gradient(120deg,#ff7a1c,#f05e00);border-radius:999px;border-bottom:none;margin-top:26px;padding:16px 0;font-size:16.5px}
+}
+
+/* 横はみ出しの根絶（レイアウト幅をビューポートに固定） */
+html,body{overflow-x:clip}
+
+/* モバイル微修正: 月次サイクル縦積み・DLカード整列 */
+@media(max-width:980px){
+  .month-row{display:block;padding:20px 0}
+  .month-row .mw{display:block;margin-bottom:8px}
+  .month-row h5{display:block;margin-bottom:8px}
+  .doc-dl{align-items:flex-start}
+  .doc-dl .d-ic{margin-top:4px}
+}
 </style>
 </head>
 <body>
@@ -505,8 +533,20 @@ body{word-break:auto-phrase}
         <li><a href="index.html#contact" class="nav-main">無料相談</a></li>
       </ul>
     </nav>
+    <button class="menu-btn" aria-label="メニューを開閉" onclick="document.body.classList.toggle('menu-open')"><span></span><span></span><span></span></button>
   </div>
 </header>
+<div class="drawer" id="drawer" aria-hidden="true">
+  <nav class="drawer-nav">
+    <a href="index.html">トップ</a>
+    <a href="sales.html">営業支援</a>
+    <a href="ax.html">AI導入・業務自動化</a>
+    <a href="index.html#works">導入事例</a>
+    <a href="index.html#company">会社概要</a>
+    <a href="index.html#docs">資料ダウンロード</a>
+    <a href="index.html#contact" class="drawer-cta">無料相談する</a>
+  </nav>
+</div>
 
 <a href="index.html#contact" class="side-cta">無料相談<small>30分・オンライン可</small></a>
 
@@ -694,6 +734,9 @@ function gateSubmit(){
   document.getElementById("gateDone").classList.add("show");
 }
 document.querySelectorAll("[data-doc]").forEach(el=>el.addEventListener("click",e=>{e.preventDefault();gateOpen(el.dataset.doc);}));
+</script>
+<script>
+document.querySelectorAll('.drawer-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open')})});
 </script>
 </body>
 </html>
