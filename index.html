@@ -715,19 +715,28 @@ html,body{overflow-x:clip}
 @media(max-width:980px){body{word-break:normal}}
 
 /* ═══ オープニング演出＋ヒーロー入場強化（2026-08-15） ═══ */
-:root{--iD:1.5s}
+:root{--iD:1.75s}
 html.skip-intro{--iD:.05s}
 html.skip-intro .intro{display:none}
-.intro{position:fixed;inset:0;z-index:300;background:linear-gradient(135deg,#081120,#0d1d3d 60%,#102448);display:flex;align-items:center;justify-content:center;animation:introOut .65s 1.5s cubic-bezier(.75,0,.25,1) both;pointer-events:none}
-@keyframes introOut{to{transform:translateY(-101%)}}
-.intro-inner{display:flex;flex-direction:column;align-items:center;gap:16px}
-.intro-inner img{width:56px;opacity:0;animation:iPop .55s .05s cubic-bezier(.16,1,.3,1) both}
-.intro-nm{font-family:var(--en);font-weight:700;font-size:46px;color:#fff;letter-spacing:.03em;line-height:1;opacity:0;animation:iUp .55s .2s cubic-bezier(.16,1,.3,1) both}
-.intro-tag{font-size:14.5px;font-weight:700;color:#c5d0e0;letter-spacing:.14em;opacity:0;animation:iUp .55s .38s cubic-bezier(.16,1,.3,1) both}
-.intro-line{position:absolute;left:50%;transform:translateX(-50%);bottom:27%;width:0;height:2px;background:linear-gradient(90deg,#ff7a1c,#ffb37a);animation:iLine .6s .55s cubic-bezier(.7,0,.3,1) both}
-@keyframes iLine{to{width:200px}}
+.intro{position:fixed;inset:0;z-index:300;background:linear-gradient(135deg,#081120,#0d1d3d 60%,#102448);display:flex;align-items:center;justify-content:center;animation:introOut .7s 1.7s cubic-bezier(.8,0,.2,1) both;pointer-events:none;overflow:hidden}
+@keyframes introOut{to{clip-path:polygon(0 0,100% 0,100% 0,0 12%);transform:translateY(-4%)}}
+.intro::before{content:"";position:absolute;top:-30%;height:160%;width:14%;left:-20%;transform:skewX(-16deg);background:linear-gradient(180deg,rgba(255,122,28,.22),rgba(255,122,28,.02));animation:iBand 1.7s .1s cubic-bezier(.6,.05,.3,1) both}
+@keyframes iBand{to{left:112%}}
+.intro::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 52%,rgba(110,168,255,.16),transparent 55%);animation:iGlow 1.7s ease-out both}
+@keyframes iGlow{0%{opacity:0}35%{opacity:1}100%{opacity:.6}}
+.intro-inner{display:flex;flex-direction:column;align-items:center;gap:16px;animation:iExit .7s 1.68s cubic-bezier(.8,0,.2,1) both}
+@keyframes iExit{to{transform:translateY(-46px) scale(1.06);opacity:0}}
+.intro-inner img{width:58px;opacity:0;animation:iPop .6s .05s cubic-bezier(.16,1,.3,1) both}
+.intro-nm{font-family:var(--en);font-weight:700;font-size:52px;color:#fff;letter-spacing:.03em;line-height:1;display:flex}
+.intro-nm i{font-style:normal;opacity:0;animation:iChar .55s cubic-bezier(.16,1,.3,1) both}
+.intro-nm i:nth-child(1){animation-delay:.18s}.intro-nm i:nth-child(2){animation-delay:.24s}.intro-nm i:nth-child(3){animation-delay:.3s}.intro-nm i:nth-child(4){animation-delay:.36s}.intro-nm i:nth-child(5){animation-delay:.42s}.intro-nm i:nth-child(6){animation-delay:.48s}.intro-nm i:nth-child(7){animation-delay:.54s}
+@keyframes iChar{from{opacity:0;transform:translateY(30px) scale(1.3);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+.intro-tag{font-size:15px;font-weight:700;color:#c5d0e0;letter-spacing:.16em;opacity:0;animation:iUp .55s .62s cubic-bezier(.16,1,.3,1) both}
+.intro-line{position:absolute;left:50%;transform:translateX(-50%);bottom:27%;width:0;height:2px;background:linear-gradient(90deg,transparent,#ff7a1c 30%,#ffb37a 70%,transparent);animation:iLine .55s .75s cubic-bezier(.7,0,.3,1) both,iLineSweep .5s 1.45s cubic-bezier(.8,0,.2,1) both;box-shadow:0 0 18px rgba(255,122,28,.7)}
+@keyframes iLine{to{width:220px}}
+@keyframes iLineSweep{to{width:120vw;opacity:0}}
 @keyframes iUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
-@keyframes iPop{from{opacity:0;transform:scale(.6) rotate(-8deg)}to{opacity:1;transform:none}}
+@keyframes iPop{from{opacity:0;transform:scale(.5) rotate(-12deg)}to{opacity:1;transform:none}}
 /* ヒーロー: イントロ後に段差入場＋流れるオレンジ帯 */
 .hero .band-o{position:absolute;top:-20%;height:140%;transform:skewX(-14deg);width:9%;left:56%;background:linear-gradient(180deg,rgba(255,122,28,.12),rgba(255,122,28,0));animation:bandDrift2 15s ease-in-out infinite alternate;pointer-events:none}
 .hero .band-b{position:absolute;top:-20%;height:140%;transform:skewX(-14deg);width:6%;left:76%;background:linear-gradient(180deg,rgba(110,168,255,.09),rgba(110,168,255,0));animation:bandDrift2 19s ease-in-out infinite alternate-reverse;pointer-events:none}
@@ -764,7 +773,7 @@ html.skip-intro .intro{display:none}
 <div class="intro" aria-hidden="true">
   <div class="intro-inner">
     <img src="assets/mark_white.png" alt="">
-    <span class="intro-nm">Esforco</span>
+    <span class="intro-nm"><i>E</i><i>s</i><i>f</i><i>o</i><i>r</i><i>c</i><i>o</i></span>
     <span class="intro-tag">事業の価値を、市場に実装する。</span>
   </div>
   <span class="intro-line"></span>
@@ -895,7 +904,7 @@ html.skip-intro .intro{display:none}
           <span class="p-more">詳しく見る →</span>
         </a>
         <a href="ax.html" class="scard">
-          <span class="kic kic-o en">AI</span><h3>AI導入・業務自動化</h3><span class="tag">NEW</span>
+          <span class="kic kic-o en">AI</span><h3>AI導入・業務自動化</h3>
           <p>人手不足の現場に、AIで「採らなくても回る」仕組みを。無料の訪問診断から研修・実装・定着まで、月額で並走します。</p>
           <span class="p-more">詳しく見る →</span>
         </a>
@@ -1265,7 +1274,7 @@ document.querySelectorAll("[data-doc]").forEach(el=>el.addEventListener("click",
 })();
 </script>
 <script>
-setTimeout(function(){var i=document.querySelector('.intro');if(i){i.style.display='none'}},2400);
+setTimeout(function(){var i=document.querySelector('.intro');if(i){i.style.display='none'}},2700);
 document.querySelectorAll('.drawer-nav a').forEach(function(a){a.addEventListener('click',function(){document.body.classList.remove('menu-open')})});
 </script>
 </body>
