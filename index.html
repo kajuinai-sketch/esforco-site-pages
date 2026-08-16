@@ -19,7 +19,7 @@
   --bg1:#0a1730;--bg2:#0d1d3d;--bg3:#102448;
   --card:rgba(255,255,255,.045);--card-bd:rgba(255,255,255,.09);
   --ink:#eef2f8;--sub:#9fb0c8;--faint:#6b7c96;
-  --acc:#ff7a1c;--acc2:#ff9448;--blue:#2f6fe4;--blue2:#6ea8ff;
+  --acc:#d95f12;--acc2:#f09a55;--blue:#2f6fe4;--blue2:#6ea8ff;
   --sans:"Zen Kaku Gothic New",sans-serif;--en:"Barlow",sans-serif;
   --r:18px;
 }
@@ -37,7 +37,7 @@ h1,h2,h3,h4,h5{font-feature-settings:"palt" 1}
 .reveal{opacity:0;transform:translateY(22px);transition:opacity .9s ease,transform .9s ease}
 .reveal.on{opacity:1;transform:none}
 .btn{display:inline-block;padding:16px 42px;border-radius:999px;font-size:14px;letter-spacing:.08em;font-weight:700;transition:.3s;text-align:center}
-.btn-acc{background:linear-gradient(120deg,var(--acc),#f05e00);color:#fff;box-shadow:0 10px 30px rgba(255,122,28,.35)}
+.btn-acc{background:var(--acc);color:#fff;box-shadow:0 10px 30px rgba(255,122,28,.35)}
 .btn-acc:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(255,122,28,.5)}
 .btn-line{border:1.5px solid rgba(255,255,255,.35);color:#fff}
 .btn-line:hover{border-color:#fff;background:rgba(255,255,255,.06)}
@@ -54,12 +54,12 @@ nav a{color:#31405a;font-size:13.5px;letter-spacing:.06em;font-weight:500}
 nav a:hover{color:#0c1b33}
 .nav-doc{border:1.5px solid #c6cdd9;border-radius:999px;padding:10px 24px;font-size:12.5px;color:#31405a}
 .nav-doc:hover{border-color:#31405a}
-.nav-main{background:linear-gradient(120deg,var(--acc),#f05e00);color:#fff!important;border-radius:999px;padding:11px 26px;font-size:12.5px;font-weight:700;white-space:nowrap}
+.nav-main{background:var(--acc);color:#fff!important;border-radius:999px;padding:11px 26px;font-size:12.5px;font-weight:700;white-space:nowrap}
 .nav-doc{white-space:nowrap}
 .nav-main:hover{opacity:.9}
 
 /* side cta */
-.side-cta{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:99;writing-mode:vertical-rl;background:linear-gradient(180deg,var(--acc),#f05e00);color:#fff;border-radius:12px 0 0 12px;padding:26px 13px;font-size:13.5px;letter-spacing:.2em;font-weight:700;box-shadow:-6px 6px 24px rgba(0,0,0,.3);transition:.3s;display:flex;align-items:center;gap:12px}
+.side-cta{position:fixed;right:0;top:50%;transform:translateY(-50%);z-index:99;writing-mode:vertical-rl;background:var(--acc);color:#fff;border-radius:12px 0 0 12px;padding:26px 13px;font-size:13.5px;letter-spacing:.2em;font-weight:700;box-shadow:-6px 6px 24px rgba(0,0,0,.3);transition:.3s;display:flex;align-items:center;gap:12px}
 .side-cta small{font-size:9.5px;letter-spacing:.14em;font-weight:500;opacity:.85}
 .side-cta:hover{padding-right:20px}
 
@@ -143,7 +143,7 @@ nav a:hover{color:#0c1b33}
 .wviz{position:relative;aspect-ratio:16/9.5;background:linear-gradient(150deg,#0c2049,#152f63);display:grid;place-items:center;overflow:hidden}
 .wviz svg{width:78%;height:auto}
 .wviz>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.wbadge{position:absolute;left:18px;bottom:16px;background:linear-gradient(120deg,var(--acc),#f05e00);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:7px 18px;letter-spacing:.04em}
+.wbadge{position:absolute;left:18px;bottom:16px;background:var(--acc);color:#fff;font-size:13px;font-weight:700;border-radius:999px;padding:7px 18px;letter-spacing:.04em}
 .wbody{padding:26px 28px 30px}
 .wbody .cat{font-family:var(--en);font-size:11px;letter-spacing:.18em;color:var(--faint);text-transform:uppercase}
 .wbody h3{font-size:16.5px;font-weight:700;line-height:1.9;margin-top:10px}
@@ -266,7 +266,7 @@ a:focus-visible,button:focus-visible{outline:2px solid var(--acc2);outline-offse
 .lp-body{padding:20px 24px 24px}
 .lp-title{font-size:14.5px;font-weight:700;line-height:1.9}
 .lp-desc{font-size:12px;color:#5c6672;margin-top:8px;line-height:1.9}
-.lp-btn{display:block;margin-top:16px;text-align:center;background:linear-gradient(120deg,var(--acc),#f05e00);color:#fff;font-size:13.5px;font-weight:700;border-radius:999px;padding:13px;letter-spacing:.06em;transition:.3s}
+.lp-btn{display:block;margin-top:16px;text-align:center;background:var(--acc);color:#fff;font-size:13.5px;font-weight:700;border-radius:999px;padding:13px;letter-spacing:.06em;transition:.3s}
 .lp-btn:hover{opacity:.9}
 @media(max-width:980px){.leadpop{display:none}}
 
@@ -326,18 +326,18 @@ body{font-size:16px}
 .ci{width:46px;height:46px;flex:none;border-radius:12px;background:rgba(47,111,228,.18);display:grid;place-items:center}
 .ci svg{width:23px;height:23px;stroke:#6ea8ff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .ci-o{background:rgba(255,122,28,.15)}
-.ci-o svg{stroke:#ff9448}
+.ci-o svg{stroke:#f09a55}
 
 /* 進め方: 図解ステッパー */
 .steps{display:grid;grid-template-columns:repeat(var(--cols,5),1fr);gap:0;margin-top:70px}
 .step{position:relative;padding-right:28px}
 .s-head{display:flex;align-items:center;margin-bottom:20px}
-.s-no{width:48px;height:48px;border-radius:50%;background:linear-gradient(135deg,#ff7a1c,#f05e00);color:#fff;display:grid;place-items:center;font-weight:900;font-size:20px;flex:none;box-shadow:0 8px 22px rgba(255,122,28,.35)}
+.s-no{width:48px;height:48px;border-radius:50%;background:#d95f12;color:#fff;display:grid;place-items:center;font-weight:900;font-size:20px;flex:none;box-shadow:0 8px 22px rgba(255,122,28,.35)}
 .s-line{flex:1;height:2px;background:linear-gradient(90deg,rgba(255,122,28,.55),rgba(255,255,255,.12));margin-left:14px;border-radius:2px}
 .step:last-child .s-line{display:none}
 .step h4{font-size:18px;font-weight:700;margin-bottom:8px}
 .step p{font-size:14px;color:var(--sub);line-height:2}
-.step em{font-style:normal;color:#ff9448;font-size:13px;display:block;margin-top:8px;font-weight:700}
+.step em{font-style:normal;color:#f09a55;font-size:13px;display:block;margin-top:8px;font-weight:700}
 @media(max-width:980px){
 .steps{grid-template-columns:1fr}
 .step{padding:0 0 36px 0;display:grid;grid-template-columns:48px 1fr;column-gap:20px}
@@ -373,7 +373,7 @@ body{font-size:16px}
 .sic{width:48px;height:48px;flex:none;border-radius:14px;background:rgba(47,111,228,.18);display:grid;place-items:center}
 .sic svg{width:24px;height:24px;stroke:#6ea8ff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .sic-o{background:rgba(255,122,28,.15)}
-.sic-o svg{stroke:#ff9448}
+.sic-o svg{stroke:#f09a55}
 .prom-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px 60px;margin-top:56px}
 .prom{display:grid;grid-template-columns:48px 1fr;gap:6px 20px;align-items:start}
 .prom h4{font-size:17.5px;font-weight:700;line-height:1.7;align-self:center}
@@ -384,7 +384,7 @@ body{font-size:16px}
 .why3 p{grid-column:1/-1;font-size:14.5px;color:var(--sub);line-height:2;margin-top:8px}
 .checklist{margin-top:30px;display:grid;grid-template-columns:1fr 1fr;gap:0 56px}
 .checklist li{display:grid;grid-template-columns:26px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--card-bd);align-items:start}
-.checklist svg{width:20px;height:20px;stroke:#ff9448;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:6px}
+.checklist svg{width:20px;height:20px;stroke:#f09a55;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;margin-top:6px}
 .checklist b{display:block;font-size:15px;font-weight:700}
 .checklist span{color:var(--sub);font-size:13.5px;line-height:1.9}
 @media(max-width:980px){.prom-grid,.why3,.checklist{grid-template-columns:1fr}}
@@ -472,7 +472,7 @@ footer{font-size:14px}
 .docs-h{font-size:14px;font-weight:700;color:var(--sub);letter-spacing:.08em;margin-bottom:14px}
 .doc-dl{display:flex;gap:16px;align-items:center;background:rgba(255,255,255,.05);border:1px solid var(--card-bd);border-radius:14px;padding:16px 20px;margin-bottom:12px;transition:.3s}
 .doc-dl:hover{border-color:rgba(255,148,72,.5);transform:translateY(-2px)}
-.doc-dl .d-ic{width:40px;height:40px;flex:none;border-radius:10px;background:linear-gradient(120deg,var(--acc),#f05e00);display:grid;place-items:center;font-weight:900;font-size:18px;color:#fff}
+.doc-dl .d-ic{width:40px;height:40px;flex:none;border-radius:10px;background:var(--acc);display:grid;place-items:center;font-weight:900;font-size:18px;color:#fff}
 .doc-dl b{display:block;font-size:15px}
 .doc-dl i{display:block;font-style:normal;font-size:12px;color:var(--sub);margin-top:2px}
 @media(max-width:980px){.frow2{grid-template-columns:1fr}}
@@ -484,17 +484,17 @@ footer{font-size:14px}
 .gate-card{position:relative;width:min(460px,94vw);background:#0f2141;border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:36px 34px;box-shadow:0 30px 80px rgba(0,0,0,.5);max-height:92vh;overflow:auto}
 .gate-close{position:absolute;right:14px;top:14px;width:30px;height:30px;border:none;border-radius:50%;background:rgba(255,255,255,.08);color:#b6c4d9;font-size:16px;cursor:pointer}
 .gate-close:hover{background:rgba(255,255,255,.16)}
-.gate-kicker{font-family:var(--en);font-size:10px;letter-spacing:.24em;color:#ff9448;font-weight:600;text-transform:uppercase}
+.gate-kicker{font-family:var(--en);font-size:10px;letter-spacing:.24em;color:#f09a55;font-weight:600;text-transform:uppercase}
 .gate-title{font-size:19px;font-weight:900;margin-top:8px;line-height:1.6}
 .gate-doc{font-size:13.5px;color:#b6c4d9;margin-top:6px}
 .gate label{display:block;font-size:12.5px;color:#b6c4d9;margin:16px 0 6px;letter-spacing:.06em}
 .gate input,.gate select{width:100%;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.16);color:#fff;padding:13px 15px;font-size:15.5px;font-family:var(--sans);border-radius:10px}
 .gate select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%239fb0c8' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center}
 .gate select option{color:#15181d}
-.gate input:focus,.gate select:focus{outline:none;border-color:#ff7a1c}
-.gate-err{display:none;margin-top:12px;font-size:12.5px;color:#ff8f7a;background:rgba(255,90,60,.1);border:1px solid rgba(255,90,60,.3);border-radius:10px;padding:10px 14px;line-height:1.7}
+.gate input:focus,.gate select:focus{outline:none;border-color:#d95f12}
+.gate-err{display:none;margin-top:12px;font-size:12.5px;color:#f0917d;background:rgba(255,90,60,.1);border:1px solid rgba(255,90,60,.3);border-radius:10px;padding:10px 14px;line-height:1.7}
 .gate-err.show{display:block}
-.gate-btn{width:100%;margin-top:20px;border:none;cursor:pointer;background:linear-gradient(120deg,#ff7a1c,#f05e00);color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;border-radius:999px;padding:15px;letter-spacing:.06em;transition:.3s}
+.gate-btn{width:100%;margin-top:20px;border:none;cursor:pointer;background:#d95f12;color:#fff;font-family:var(--sans);font-size:15px;font-weight:700;border-radius:999px;padding:15px;letter-spacing:.06em;transition:.3s}
 .gate-btn:hover{opacity:.9}
 .gate-note{font-size:11px;color:#8b9ab0;margin-top:12px;line-height:1.8}
 .gate-done{display:none;text-align:center;padding:30px 0 10px}
@@ -505,7 +505,7 @@ footer{font-size:14px}
 /* ポップアップのタブ切替 */
 .lp-tabs{display:flex;border-bottom:1px solid rgba(12,27,51,.12)}
 .lp-tab{flex:1;border:none;background:none;padding:12px 0;font-family:var(--sans);font-size:12.5px;font-weight:700;color:#8a93a0;cursor:pointer;border-bottom:2px solid transparent}
-.lp-tab.on{color:#0c1b33;border-bottom-color:#ff7a1c}
+.lp-tab.on{color:#0c1b33;border-bottom-color:#d95f12}
 
 /* ═══ 可読性 最終強化: 説明文16-17px基準 + ボタン統一（2026-08-15） ═══ */
 .btn{font-size:15.5px;padding:17px 44px;line-height:1.4}
@@ -586,7 +586,7 @@ footer{font-size:15px}
 .sstats span,.stats span{font-size:15px;color:#c5d0e0;letter-spacing:.04em}
 .sstats b i{font-size:16px}
 .sstats>div{padding:20px 30px}
-.eyebrow,.hero-eyebrow{font-size:13px;color:#ffa261}
+.eyebrow,.hero-eyebrow{font-size:13px;color:#eb9a5e}
 .st .num,.proc-step .pnum{font-size:13px}
 .proc-step p{font-size:14px}
 .menu-items li{font-size:14px}
@@ -693,7 +693,7 @@ body{word-break:auto-phrase}
   body.menu-open{overflow:hidden}
   .drawer-nav{display:flex;flex-direction:column;width:78%;max-width:340px;text-align:center}
   .drawer-nav a{color:#eef2f8;font-size:17.5px;font-weight:700;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.1);letter-spacing:.04em}
-  .drawer-nav a.drawer-cta{background:linear-gradient(120deg,#ff7a1c,#f05e00);border-radius:999px;border-bottom:none;margin-top:26px;padding:16px 0;font-size:16.5px}
+  .drawer-nav a.drawer-cta{background:#d95f12;border-radius:999px;border-bottom:none;margin-top:26px;padding:16px 0;font-size:16.5px}
 }
 
 /* 横はみ出しの根絶（レイアウト幅をビューポートに固定） */
@@ -732,7 +732,7 @@ html.skip-intro .intro{display:none}
 .intro-nm i:nth-child(1){animation-delay:.18s}.intro-nm i:nth-child(2){animation-delay:.24s}.intro-nm i:nth-child(3){animation-delay:.3s}.intro-nm i:nth-child(4){animation-delay:.36s}.intro-nm i:nth-child(5){animation-delay:.42s}.intro-nm i:nth-child(6){animation-delay:.48s}.intro-nm i:nth-child(7){animation-delay:.54s}
 @keyframes iChar{from{opacity:0;transform:translateY(30px) scale(1.3);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
 .intro-tag{font-size:15px;font-weight:700;color:#c5d0e0;letter-spacing:.16em;opacity:0;animation:iUp .55s .62s cubic-bezier(.16,1,.3,1) both}
-.intro-line{position:absolute;left:50%;transform:translateX(-50%);bottom:27%;width:0;height:2px;background:linear-gradient(90deg,transparent,#ff7a1c 30%,#ffb37a 70%,transparent);animation:iLine .55s .75s cubic-bezier(.7,0,.3,1) both,iLineSweep .5s 1.45s cubic-bezier(.8,0,.2,1) both;box-shadow:0 0 18px rgba(255,122,28,.7)}
+.intro-line{position:absolute;left:50%;transform:translateX(-50%);bottom:27%;width:0;height:2px;background:linear-gradient(90deg,transparent,#d95f12 30%,#f0b285 70%,transparent);animation:iLine .55s .75s cubic-bezier(.7,0,.3,1) both,iLineSweep .5s 1.45s cubic-bezier(.8,0,.2,1) both;box-shadow:0 0 18px rgba(255,122,28,.7)}
 @keyframes iLine{to{width:220px}}
 @keyframes iLineSweep{to{width:120vw;opacity:0}}
 @keyframes iUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
@@ -777,7 +777,7 @@ html.skip-intro .intro{display:none}
 
 /* ヒーロー数字: 営業/AIの事業タグで2対2に */
 .st-tag{display:inline-block;font-style:normal;font-size:11.5px;font-weight:800;letter-spacing:.14em;border-radius:999px;padding:3px 12px;margin-bottom:10px}
-.st-tag.st-s{color:#ffa261;border:1px solid rgba(255,122,28,.5)}
+.st-tag.st-s{color:#eb9a5e;border:1px solid rgba(255,122,28,.5)}
 .st-tag.st-a{color:#8ab4ff;border:1px solid rgba(110,168,255,.5)}
 .hero-btns{flex-wrap:wrap;justify-content:center}
 
@@ -803,10 +803,10 @@ html.skip-intro .intro{display:none}
 .stats2{display:grid;grid-template-columns:1fr 1fr;gap:22px;max-width:920px;margin:66px auto 0;text-align:left;opacity:0;animation:heroUp .8s calc(var(--iD) + 1.15s) cubic-bezier(.16,1,.3,1) both}
 .sgroup{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:18px;padding:26px 32px 24px;backdrop-filter:blur(8px);transition:.3s}
 .sgroup:hover{transform:translateY(-3px);border-color:rgba(255,255,255,.2)}
-.sg-sales{box-shadow:inset 0 3px 0 #ff7a1c}
+.sg-sales{box-shadow:inset 0 3px 0 #d95f12}
 .sg-ai{box-shadow:inset 0 3px 0 #6ea8ff}
 .sg-head{font-size:14px;font-weight:800;letter-spacing:.1em}
-.sg-sales .sg-head{color:#ffa261}
+.sg-sales .sg-head{color:#eb9a5e}
 .sg-ai .sg-head{color:#8ab4ff}
 .sg-body{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:16px}
 .sg-body b{display:block;font-family:var(--en);font-weight:700;font-size:30px;color:#fff;line-height:1.2}
@@ -933,7 +933,7 @@ html.skip-intro .intro{display:none}
     </div>
     <div class="gate-done" id="gateDone">
       <b>ダウンロードを開始しました</b>
-      <p>始まらない場合は<a id="gateRetry" href="#" style="color:#ff9448">こちら</a>をクリックしてください。<br>ご入力ありがとうございました。</p>
+      <p>始まらない場合は<a id="gateRetry" href="#" style="color:#f09a55">こちら</a>をクリックしてください。<br>ご入力ありがとうございました。</p>
     </div>
   </div>
 </div>
@@ -1057,9 +1057,9 @@ html.skip-intro .intro{display:none}
             <g stroke="rgba(255,255,255,.1)"><line x1="20" y1="40" x2="300" y2="40"/><line x1="20" y1="90" x2="300" y2="90"/><line x1="20" y1="140" x2="300" y2="140"/></g>
             <path d="M20 150 L90 120 L150 128 L210 80 L290 30 L290 170 L20 170 Z" fill="url(#g1)" opacity=".22"/>
             <path d="M20 150 L90 120 L150 128 L210 80 L290 30" stroke="#3f7ef0" stroke-width="3" stroke-linecap="round"/>
-            <path d="M270 34 L290 30 L286 50" stroke="#ff7a1c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="90" cy="120" r="6" fill="#ff7a1c"/>
-            <circle cx="210" cy="80" r="6" fill="#ff7a1c"/>
+            <path d="M270 34 L290 30 L286 50" stroke="#d95f12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="90" cy="120" r="6" fill="#d95f12"/>
+            <circle cx="210" cy="80" r="6" fill="#d95f12"/>
           </svg>
           <span class="wbadge">新規商談が動き出した</span>
         </div>
@@ -1077,8 +1077,8 @@ html.skip-intro .intro{display:none}
             </g>
             <path d="M110 60 L170 75 L170 105 L110 120 Z" fill="#1c3a78"/>
             <path d="M175 78 L215 86 L215 96 L175 102 Z" fill="#24468c"/>
-            <path d="M220 88 C250 86 270 60 300 34" stroke="#ff7a1c" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <circle cx="252" cy="74" r="5" fill="#ff7a1c"/><circle cx="300" cy="34" r="6" fill="#ff9448"/>
+            <path d="M220 88 C250 86 270 60 300 34" stroke="#d95f12" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <circle cx="252" cy="74" r="5" fill="#d95f12"/><circle cx="300" cy="34" r="6" fill="#f09a55"/>
             <g fill="#6ea8ff" opacity=".8"><circle cx="10" cy="40" r="3"/><circle cx="10" cy="70" r="3"/><circle cx="10" cy="100" r="3"/><circle cx="10" cy="130" r="3"/></g>
           </svg>
           <span class="wbadge">受注が安定した</span>
@@ -1097,11 +1097,11 @@ html.skip-intro .intro{display:none}
               <g stroke="#3f7ef0" stroke-width="10" opacity=".85">
                 <line x1="0" y1="-58" x2="0" y2="-66"/><line x1="41" y1="-41" x2="47" y2="-47"/><line x1="58" y1="0" x2="66" y2="0"/><line x1="41" y1="41" x2="47" y2="47"/><line x1="0" y1="58" x2="0" y2="66"/><line x1="-41" y1="41" x2="-47" y2="47"/><line x1="-58" y1="0" x2="-66" y2="0"/><line x1="-41" y1="-41" x2="-47" y2="-47"/>
               </g>
-              <path d="M0 0 L0 -46 A46 46 0 0 1 32 -33 Z" fill="#ff7a1c"/>
+              <path d="M0 0 L0 -46 A46 46 0 0 1 32 -33 Z" fill="#d95f12"/>
               <circle r="16" fill="#0d1d3d" stroke="#6ea8ff" stroke-width="3"/>
             </g>
-            <path d="M190 120 C230 110 250 70 290 40" stroke="#ff7a1c" stroke-width="3" stroke-linecap="round" fill="none"/>
-            <path d="M272 42 L290 40 L286 58" stroke="#ff7a1c" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M190 120 C230 110 250 70 290 40" stroke="#d95f12" stroke-width="3" stroke-linecap="round" fill="none"/>
+            <path d="M272 42 L290 40 L286 58" stroke="#d95f12" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
             <g stroke="rgba(110,168,255,.5)" fill="none"><path d="M20 30 h30 v20 h20"/><path d="M20 150 h40 v-20 h25"/></g>
             <g fill="#6ea8ff"><circle cx="20" cy="30" r="3"/><circle cx="20" cy="150" r="3"/></g>
           </svg>
