@@ -598,6 +598,11 @@ html,body{overflow-x:clip}
 /* 引用行を主役級に拡大 */
 .hero-quote{font-size:clamp(17px,1.9vw,22px);font-weight:700;color:#d5dde9;border-left:4px solid #ff7a1c;padding-left:20px;line-height:1.9}
 .crumb{font-size:14px}
+
+/* ═══ ヒーロー高級化: 明朝＋金の細線（2026-08-16） ═══ */
+.crumb::after{content:"";display:block;width:64px;height:1px;background:linear-gradient(90deg,#c9a15a,rgba(201,161,90,0));margin-top:22px}
+.hero-jp2{font-family:"Noto Serif JP",serif;font-weight:600;letter-spacing:.04em}
+.hero-jp2 em{font-family:var(--sans);font-weight:900}
 </style>
 </head>
 <body>
