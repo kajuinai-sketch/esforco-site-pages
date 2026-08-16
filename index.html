@@ -818,6 +818,30 @@ html.skip-intro .intro{display:none}
   .sg-body b{font-size:25px}
 }
 @media(prefers-reduced-motion:reduce){.stats2{animation:none;opacity:1}}
+
+/* ═══ モバイル短縮 第2弾: トップはダイジェスト、詳細はLPへ（2026-08-16） ═══ */
+@media(max-width:980px){
+  .gap-sub{display:none}
+  .scard p{display:none}
+  .scard{padding:26px 24px}
+  #ax .sec-lead{display:none}
+  #process .steps{display:none}
+  .brand-band{display:none}
+  .company-top .ceo-photo{display:none}
+  .company-top{gap:0}
+  .contact-points{display:none}
+  .sec{padding:70px 0}
+}
+
+@media(max-width:980px){
+  .co-table th,.co-table td{padding:12px 0;font-size:14.5px}
+  .company-msg{font-size:16px}
+}
+
+/* ポップアップの脱・英字装飾＋明朝タイトル */
+.lp-thumb span{font-family:var(--sans);font-size:12px;letter-spacing:.14em;color:#d9b877;font-weight:700}
+.lp-thumb b{font-family:"Noto Serif JP",serif;font-weight:600;letter-spacing:.04em}
+.lp-title{font-family:"Noto Serif JP",serif;font-weight:600}
 </style>
 </head>
 <body>
@@ -865,7 +889,7 @@ html.skip-intro .intro{display:none}
   <button class="lp-close" id="lpClose" aria-label="閉じる">×</button>
   <div class="lp-thumb" id="lpThumb">
     <img src="assets/mark_white.png" alt="">
-    <span>ESFORCO GUIDE</span>
+    <span>サービス資料のご案内</span>
     <b id="lpThumbT">営業支援サービス<br>ご案内資料</b>
   </div>
   <div class="lp-body">
