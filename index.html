@@ -780,6 +780,22 @@ html.skip-intro .intro{display:none}
 .st-tag.st-s{color:#ffa261;border:1px solid rgba(255,122,28,.5)}
 .st-tag.st-a{color:#8ab4ff;border:1px solid rgba(110,168,255,.5)}
 .hero-btns{flex-wrap:wrap;justify-content:center}
+
+/* モバイル: トップのAI詳細は畳んでLPへ誘導（ページ長の圧縮） */
+.ax-m-cta{display:none}
+@media(max-width:980px){
+  .prom-grid,.steps[style*="--cols:4"],.month-close,.ax-note{display:none}
+  .ax-m-cta{display:inline-block;margin-top:26px}
+}
+
+/* モバイル: 軌道図を非表示・導入事例を横スワイプに（ページ長圧縮） */
+@media(max-width:980px){
+  .svc-flex>.orbit-wrap,.svc-flex>.orbit{display:none}
+  .works-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:16px;padding-bottom:14px;-webkit-overflow-scrolling:touch}
+  .works-grid .wcard{flex:0 0 82%;scroll-snap-align:start}
+  .works-grid::-webkit-scrollbar{height:4px}
+  .works-grid::-webkit-scrollbar-thumb{background:rgba(255,255,255,.2);border-radius:2px}
+}
 </style>
 </head>
 <body>
@@ -904,14 +920,14 @@ html.skip-intro .intro{display:none}
   <div class="wrap">
     <h2 class="jp-title reveal">埋もれている価値を、<br>成果に変える会社です。</h2>
     <p class="gap-msg reveal">優れた事業と、正しく評価される市場。<br>そのあいだには、<em>設計されていないプロセス</em>がある。<br>Esforcoは、その間を埋める外部チームです。</p>
-    <p class="gap-sub reveal">提案書を渡して去る代行ではありません。御社の定例に入り、現場の温度感ごと引き受けて、成果まで運びます。<br>戦略を描く人と、手を動かす人を分けない——設計した人が、<span class="nw">実行まで責任を持ちます。</span></p>
+    <p class="gap-sub reveal">提案書を渡して去る代行ではありません。御社の定例に入り、現場の温度感ごと引き受けて、成果まで運びます。<br>戦略を描く人と、手を動かす人を分けません。設計した人が、<span class="nw">実行まで責任を持ちます。</span></p>
   </div>
 </section>
 
 <section class="sec" id="services">
   <div class="wrap">
     <h2 class="jp-title reveal">売上を上げ、コストを下げる。<br>費用対効果で応える、2つの事業。</h2>
-    <p class="sec-lead reveal">売上を上げる営業支援、あらゆるコストを削減するAI導入・業務自動化。<span style="display:inline-block">この2軸で企業を合理的に支援します。</span><br>かけた費用がどれだけの成果になったか——<span style="display:inline-block">費用対効果を数字で示し、顧客を勝たせる会社です。</span></p>
+    <p class="sec-lead reveal">売上を上げる営業支援、あらゆるコストを削減するAI導入・業務自動化。<span style="display:inline-block">この2軸で企業を合理的に支援します。</span><br>かけた費用が、どれだけの成果になったか。<span style="display:inline-block">費用対効果を数字で示し、顧客を勝たせる会社です。</span></p>
     <div class="svc-flex">
       <div class="svc-cards reveal">
         <a href="sales.html" class="scard">
@@ -956,7 +972,8 @@ html.skip-intro .intro{display:none}
       <a href="ax.html" class="see-all reveal">AI導入の詳細を見る →</a>
     </div>
     <p class="ax-copy reveal">AI研修からAI実装まで、御社のAI推進部門を丸ごと。</p>
-    <p class="sec-lead reveal">社員を育てるAI研修（助成金で実質1/4）と、事務業務をAIごと引き受けるAI実装。見積もりの下書き、FAX注文の転記、日報の集計——事務所に埋もれた時間を、月額固定で取り戻します。</p>
+    <p class="sec-lead reveal">社員を育てるAI研修（助成金で実質1/4）と、事務業務をAIごと引き受けるAI実装。見積もりの下書き、FAX注文の転記、日報の集計。事務所に埋もれた時間を、月額固定で取り戻します。</p>
+    <a href="ax.html" class="btn btn-acc ax-m-cta">AI導入・業務自動化を詳しく見る →</a>
 
     <div class="prom-grid reveal"><div class="prom"><span class="kic">測</span><h4>まず、無料の業務診断から</h4><p>御社に伺い、事務仕事の時間をその場で一緒に測って数字にします。売り込みの前に、まず測る。</p></div><div class="prom"><span class="kic kic-o">訪</span><h4>週1回、現場に伺う伴走型</h4><p>オンラインだけのAI顧問ではありません。現場で業務と書類を見ながら、業務をAIごと引き受けて運用します。</p></div><div class="prom"><span class="kic">報</span><h4>浮いた時間を、毎月1枚で報告</h4><p>「今月、何時間・いくら浮いたか」を毎月レポートで。効果の見えないAI投資はしません。</p></div><div class="prom"><span class="kic kic-o">守</span><h4>データは御社の中に</h4><p>仕組みは御社のアカウント内に構築し、データを持ち出しません。操作を覚える必要もありません。</p></div></div>
 
@@ -983,11 +1000,11 @@ html.skip-intro .intro{display:none}
             <circle cx="90" cy="120" r="6" fill="#ff7a1c"/>
             <circle cx="210" cy="80" r="6" fill="#ff7a1c"/>
           </svg>
-          <span class="wbadge">商談数 2.4倍</span>
+          <span class="wbadge">新規商談が動き出した</span>
         </div>
         <div class="wbody">
           <span class="cat">SaaS / 業務システム</span>
-          <h3>インサイドセールスの型化で、<span style="display:inline-block">商談数を2.4倍に。</span></h3>
+          <h3>インサイドセールスの型化で、<span style="display:inline-block">新規商談が生まれ続ける状態に。</span></h3>
           <div class="wtags"><span>営業代行</span><span>IS設計</span><span>型化</span></div>
         </div>
       </div>
@@ -1003,7 +1020,7 @@ html.skip-intro .intro{display:none}
             <circle cx="252" cy="74" r="5" fill="#ff7a1c"/><circle cx="300" cy="34" r="6" fill="#ff9448"/>
             <g fill="#6ea8ff" opacity=".8"><circle cx="10" cy="40" r="3"/><circle cx="10" cy="70" r="3"/><circle cx="10" cy="100" r="3"/><circle cx="10" cy="130" r="3"/></g>
           </svg>
-          <span class="wbadge">受注率 +38%</span>
+          <span class="wbadge">受注が安定した</span>
         </div>
         <div class="wbody">
           <span class="cat">専門サービス / 士業</span>
@@ -1036,7 +1053,7 @@ html.skip-intro .intro{display:none}
         </div>
       </div>
     </div>
-    <p class="works-note reveal">※ 掲載事例には守秘の都合で仮名・一部加工を含みます。</p>
+    <p class="works-note reveal">※ 守秘義務のため社名・数値は伏せています。具体的な内容は商談の場でご説明します。</p>
     <!-- 📷 導入企業ロゴ枠: 掲載許諾済みの企業ロゴが揃ったら、ここにロゴ一覧セクションを追加する -->
   </div>
 </section>
@@ -1072,11 +1089,11 @@ html.skip-intro .intro{display:none}
   <div class="wrap">
     <h2 class="jp-title reveal">よくあるご質問</h2>
     <div class="faq-list reveal">
-      <details class="faq"><summary><span class="q">Q.</span>費用はどれくらいかかりますか？</summary><p class="a">サービスと関与の深さにより異なります。まず無料相談で現状をお伺いし、最適な形とお見積りをご提案します。AI導入は無料の業務診断で「何がどれだけ変わるか」を数字でお見せしてから金額をご提示します。</p></details>
-      <details class="faq"><summary><span class="q">Q.</span>AIはよく分からないのですが、大丈夫ですか？</summary><p class="a">大丈夫です。操作を覚えていただく必要はありません。御社の業務に合わせて作って納品し、動かし続けるところまで当社が担当します。助成金を活用した実践型の研修もご用意しています。</p></details>
-      <details class="faq"><summary><span class="q">Q.</span>どんな業種・規模に対応していますか？</summary><p class="a">BtoBを中心に、製造・建設・運送・卸売・クリニックなど幅広い業種を支援しています。従業員数十名〜数百名規模の企業様が中心です。</p></details>
-      <details class="faq"><summary><span class="q">Q.</span>データの取り扱いが不安です。</summary><p class="a">正しいご心配です。AI導入では仕組みを御社のアカウント内に構築し、データを当社に持ち帰りません。診断時にお預かりした情報も診断以外の目的には使用しません。</p></details>
-      <details class="faq"><summary><span class="q">Q.</span>丸投げではなく、社内に力を残したいのですが。</summary><p class="a">それが当社の最終目標です。仕組みとナレッジを社内に残し、御社が自走できる状態へ引き渡すところまでを設計に含めています。</p></details>
+      <details class="faq"><summary><span class="q">Q.</span>結局、いくらかかりますか？</summary><div class="a">一律の料金表がありません。営業支援は座組（稼働型・成果型）で、AI導入は業務量で変わるためです。だからこそ初回の相談と業務診断は無料にしています。現状を伺ったうえで、お見積もりと「かけた費用がどれだけ返るか」の試算をセットでご提示します。</div></details>
+      <details class="faq"><summary><span class="q">Q.</span>パソコンが苦手な社員ばかりです。それでも大丈夫ですか？</summary><div class="a">大丈夫です。仕組みは私たちが作って動かすところまで担当するので、社員の方に新しい操作を覚えていただく前提を置いていません。研修も、講義ではなく「実際に触ってみる」ところから始める実践型です。</div></details>
+      <details class="faq"><summary><span class="q">Q.</span>FAXと紙が中心の会社ですが、対象になりますか？</summary><div class="a">むしろ得意な領域です。FAX注文の転記、紙の日報の集計、見積書の下書きなど、紙と情報が止まっている事務所まわりが私たちの主戦場です。工場や現場の設備には触りません。</div></details>
+      <details class="faq"><summary><span class="q">Q.</span>データを外部のAIに入れるのは不安です。</summary><div class="a">仕組みは御社のアカウントの中に構築し、データを外部に持ち出しません。利用ルールや情報の取り扱い基準も、導入時に御社と一緒に決めます。詳細は<a href="privacy.html" style="color:#8ab4ff">プライバシーポリシー</a>もご覧ください。</div></details>
+      <details class="faq"><summary><span class="q">Q.</span>丸投げではなく、社内に力を残したいのですが。</summary><div class="a">その方針こそ歓迎です。営業もAIも、型・ナレッジ・マニュアルを御社の中に残し、最終的に自走できる状態をゴールに置いています。依存させ続けるビジネスはしません。</div></details>
     </div>
   </div>
 </section>
@@ -1178,7 +1195,7 @@ html.skip-intro .intro{display:none}
     </div>
     <div class="foot-btm">
       <span class="copy">&copy; 2026 Esforco Inc. All Rights Reserved.</span>
-      <span class="site">esforco.co.jp</span>
+      <span style="display:flex;gap:26px;align-items:center"><a href="privacy.html" style="font-size:13.5px;color:#aab8cc">プライバシーポリシー</a><span class="site">esforco.co.jp</span></span>
     </div>
   </div>
 </footer>
