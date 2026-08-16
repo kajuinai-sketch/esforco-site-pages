@@ -723,7 +723,7 @@ html,body{overflow-x:clip}
 html.skip-intro{--iD:.05s}
 html.skip-intro .intro{display:none}
 .intro{position:fixed;inset:0;z-index:300;background:linear-gradient(135deg,#081120,#0d1d3d 60%,#102448);display:flex;align-items:center;justify-content:center;animation:introOut .7s 1.7s cubic-bezier(.8,0,.2,1) both;pointer-events:none;overflow:hidden}
-@keyframes introOut{to{clip-path:polygon(0 0,100% 0,100% 0,0 12%);transform:translateY(-4%)}}
+@keyframes introOut{to{transform:translateY(-101%)}}
 .intro::before{content:"";position:absolute;top:-30%;height:160%;width:14%;left:-20%;transform:skewX(-16deg);background:linear-gradient(180deg,rgba(255,122,28,.22),rgba(255,122,28,.02));animation:iBand 1.7s .1s cubic-bezier(.6,.05,.3,1) both}
 @keyframes iBand{to{left:112%}}
 .intro::after{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 52%,rgba(110,168,255,.16),transparent 55%);animation:iGlow 1.7s ease-out both}
